@@ -1,3 +1,7 @@
+## Config .env generate token
+JWT_SECRET=mi_clave_secreta_123
+JWT_EXPIRES_IN=1h
+
 1. Set Up Your Project
 First, create a new Node.js project if you don't have one already.
 

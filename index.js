@@ -7,6 +7,8 @@ const swaggerJsDoc = require('swagger-jsdoc');
 const app = express();
 const port = process.env.PORT || 3000;
 
+app.use(express.json()); // Para leer el body en formato JSON
+
 // Swagger setup
 const swaggerOptions = {
   swaggerDefinition: {
@@ -35,10 +37,11 @@ app.get('/api/hello', (req, res) => {
 
 //Importacion de Routers
 const helloRouter = require('./routes/homeRoute')
+const tokenRouter = require('./routes/tokenRoute')
 
 // Uso implementacion de Rutas
 app.use('/api/hello-luis',helloRouter)
-
+app.use('/api/token',tokenRouter)
 
 //Puerto Corriendo
 app.listen(port, () => {
