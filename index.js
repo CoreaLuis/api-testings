@@ -12,7 +12,8 @@ app.use(express.json()); // Para leer el body en formato JSON
 // Swagger setup
 const swaggerOptions = {
   swaggerDefinition: {
-    myapi: '3.0.0',
+    // myapi: '3.0.0',
+    openapi: '3.0.0', // ✅ Correcto para OpenAPI 3
     info: {
       title: 'Backend API',
       version: '1.0.0',
@@ -24,7 +25,8 @@ const swaggerOptions = {
       },
     ],
   },
-  apis: ['./routes/*.js'], // files containing annotations as above
+//   apis: ['./routes/*.js'], // files containing annotations as above
+apis: ['./routes/**/*.js']
 };
 
 const swaggerDocs = swaggerJsDoc(swaggerOptions);
