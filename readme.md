@@ -2,6 +2,9 @@
 JWT_SECRET=mi_clave_secreta_123
 JWT_EXPIRES_IN=1h
 
+### añadir libreria jwebtoken
+npm install express jsonwebtoken dotenv
+
 1. Set Up Your Project
 First, create a new Node.js project if you don't have one already.
 
