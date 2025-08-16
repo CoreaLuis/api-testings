@@ -1,6 +1,11 @@
 ## Config .env generate token
 JWT_SECRET=mi_clave_secreta_123
 JWT_EXPIRES_IN=1h
+DB_HOST=localhost
+DB_PORT=5432
+DB_USER=postgres
+DB_PASSWORD=tu_contraseña
+DB_DATABASE=nombre_base_datos
 
 ### añadir libreria jwebtoken
 npm install express jsonwebtoken dotenv
