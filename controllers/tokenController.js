@@ -5,7 +5,7 @@ exports.token = (req, res) => {
 
     // Validación básica (aquí pondrías tu lógica real)
     if (username !== 'admin' || password !== '1234') {
-        return res.status(401).json({ message: 'Credenciales inválidas' });
+        return res.status(401).json({ message: 'Invalid Credentials' });
     }
 
     // Datos dentro del token
